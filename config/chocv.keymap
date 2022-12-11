@@ -8,10 +8,16 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define NAV_L 1
-#define OTHER_L 2
-#define NUM_L 3
-#define SYM_L 4
+//#define NAV_L 1
+//#define OTHER_L 2
+//#define NUM_L 3
+//#define SYM_L 4
+
+#define BASE 0
+#define NUMBER 1
+#define SYMBOL 2
+#define TILDE 3
+#define MULTIMEDIA 4
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -34,7 +40,7 @@
         default_layer {
             bindings = <
                 &kp Q      &kp W      &kp E       &kp R          &kp T         &kp Y            &kp U          &kp I       &kp O      &kp P
-                &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F    &kp G         &kp H            &hm RSHFT J    &hm RCTRL K &hm LALT L &hm LGUI QUOT
+                &hm LCTRL A &hm LGUI S &hm LALT D &hm LSHFT F    &kp G         &kp H            &hm RSHFT J    &hm RALT  K &hm RGUI L &hm RCTRL BKSP
                 &kp Z      &kp X      &kp C       &kp V          &kp B         &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH
                                                   &lt NAV_L TAB  &kp ENTER     &lt NUM_L SPACE  &lt SYM_L BKSP
             >;
